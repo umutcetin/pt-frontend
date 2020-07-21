@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 export class QuestionItem extends Component {
     render() {
         return (
-            <div>
-                <h3 class="text-warning">{this.props.questionitem.question}</h3>
-                <ul class="list-group list-group-flush">
-                    {this.renderOptions()}
-                </ul>
+            <div class="text-left">
+                <h3 class="text-warning px-3">{this.props.questionitem.question}</h3>
+                <div class="btn-group-toggle px-5" data-toggle="buttons">
+                    <ul class="list-group list-group-flush">
+                        {this.renderOptions()}
+                    </ul>
+                </div>
                 <hr></hr>
             </div>
         )
@@ -16,8 +18,8 @@ export class QuestionItem extends Component {
 
     renderOptions() {
         return this.props.questionitem.question_type.options.map((option) => (
-            <li class="list-group-item bg-dark text-white">
-                <label>
+            <li class="list-group-item bg-dark text-white btn-group">
+                <label class="h4">
                     <input type="radio" value={option} />
                     &nbsp;{option} 
                 </label>
