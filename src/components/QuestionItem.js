@@ -5,8 +5,10 @@ export class QuestionItem extends Component {
     render() {
         return (
             <div>
-                <h3>{this.props.questionitem.question}</h3>
-                {this.renderOptions()}
+                <h3 class="text-warning">{this.props.questionitem.question}</h3>
+                <ul class="list-group list-group-flush">
+                    {this.renderOptions()}
+                </ul>
                 <hr></hr>
             </div>
         )
@@ -14,11 +16,12 @@ export class QuestionItem extends Component {
 
     renderOptions() {
         return this.props.questionitem.question_type.options.map((option) => (
-            <label>
-                <input type="radio" value={option} />
-                {option}
-                <br></br>
-            </label>
+            <li class="list-group-item bg-dark text-white">
+                <label>
+                    <input type="radio" value={option} />
+                    &nbsp;{option} 
+                </label>
+            </li>
         ));
     }
 }

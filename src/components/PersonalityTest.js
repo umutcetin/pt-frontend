@@ -4,10 +4,12 @@ import QuestionList from './QuestionList'
 export class PersonalityTest extends Component {
     render() {
         return (
-            <div>
-                <h1>Personality Test</h1>
+            <div class="container-fluid bg-dark text-white">
+                <br></br>
+                <p class="h1 display-2 bg-warning text-dark p-5">Personality Test</p>
+                <br></br>
                 <QuestionList></QuestionList>
-                <button title="submit">submit</button>
+                <button title="submit" class="btn btn-warning btn-lg">Submit</button>
             </div>
         )
     }

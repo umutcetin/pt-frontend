@@ -12,7 +12,7 @@ export class QuestionList extends Component {
 
     renderQuestions() {
         return this.state.questions.map((question_item) => (
-            <QuestionItem questionitem={question_item} />
+              <QuestionItem questionitem={question_item} />
         ));
     }
 
